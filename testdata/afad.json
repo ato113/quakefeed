@@ -1,0 +1,36 @@
+[
+  {
+    "eventID": "725480",
+    "location": "Korkuteli (Antalya)",
+    "latitude": "36.97367",
+    "longitude": "30.44700",
+    "depth": "6.02",
+    "type": "ML",
+    "magnitude": "2.6",
+    "date": "2026-10-31T18:04:20",
+    "province": "Antalya",
+    "district": "Korkuteli"
+  },
+  {
+    "eventID": "725481",
+    "location": "",
+    "latitude": "39.45100",
+    "longitude": "28.10200",
+    "depth": "10.10",
+    "type": "mw",
+    "magnitude": "3.6",
+    "date": "2026-10-31 17:58:05",
+    "province": "Balikesir",
+    "district": "Sindirgi"
+  },
+  {
+    "eventID": "725482",
+    "location": "Bozuk Satir",
+    "latitude": "not-a-number",
+    "longitude": "30.0",
+    "depth": "5.0",
+    "type": "ML",
+    "magnitude": "1.0",
+    "date": "2026-10-31T17:00:00"
+  }
+]

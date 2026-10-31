@@ -1,0 +1,17 @@
+services:
+  quakefeed:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      QUAKEFEED_INTERVAL: 60s
+      QUAKEFEED_RETENTION: 168h
+      QUAKEFEED_LOG_LEVEL: info
+    restart: unless-stopped
+    healthcheck:
+      # The binary is the only thing in the image, so the check uses the
+      # service itself rather than curl.
+      test: ["CMD", "/quakefeed", "-help"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

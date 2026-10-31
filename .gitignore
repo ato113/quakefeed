@@ -1,0 +1,7 @@
+/quakefeed
+/dist/
+*.out
+*.test
+.DS_Store
+.idea/
+.vscode/

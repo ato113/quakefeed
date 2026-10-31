@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "us7000abcd",
+      "properties": {
+        "mag": 3.7,
+        "place": "12 km NE of Sindirgi, Turkey",
+        "time": 1793458698000,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000abcd",
+        "magType": "mb",
+        "type": "earthquake"
+      },
+      "geometry": { "type": "Point", "coordinates": [28.12, 39.46, 11.2] }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000quarry",
+      "properties": {
+        "mag": 1.9,
+        "place": "quarry blast",
+        "time": 1793458000000,
+        "magType": "ml",
+        "type": "quarry blast"
+      },
+      "geometry": { "type": "Point", "coordinates": [-117.0, 34.0, 1.0] }
+    },
+    {
+      "type": "Feature",
+      "id": "us7000nomag",
+      "properties": { "mag": null, "place": "unknown", "time": 1793457000000, "type": "earthquake" },
+      "geometry": { "type": "Point", "coordinates": [30.0, 40.0, 5.0] }
+    }
+  ]
+}
