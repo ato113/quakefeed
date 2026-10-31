@@ -1,5 +1,7 @@
 # quakefeed
 
+*[Türkçe](README.tr.md) · English*
+
 **One earthquake API from three networks that disagree.**
 
 [![CI](https://github.com/ato113/quakefeed/actions/workflows/ci.yml/badge.svg)](https://github.com/ato113/quakefeed/actions/workflows/ci.yml)
@@ -42,13 +44,44 @@ recognised as the same earthquake and merged.
 
 ## Run it
 
+### With Docker (nothing else to install)
+
 ```bash
-go run ./cmd/quakefeed
-# or
+git clone https://github.com/ato113/quakefeed
+cd quakefeed
 docker compose up
 ```
 
-It listens on `:8080` and refreshes every minute.
+### With Go
+
+You need Go 1.23 or newer — `go version` tells you what you have.
+
+```bash
+git clone https://github.com/ato113/quakefeed
+cd quakefeed
+go run ./cmd/quakefeed
+```
+
+To get a binary you can copy anywhere:
+
+```bash
+go build -o quakefeed ./cmd/quakefeed
+./quakefeed
+```
+
+### Check it is working
+
+Either way it listens on `:8080` and refreshes every minute. The first refresh
+happens at startup, so give it a couple of seconds, then:
+
+```bash
+curl localhost:8080/healthz          # status, event count, uptime
+curl localhost:8080/v1/sources       # whether each source is answering
+curl 'localhost:8080/v1/events?min_mag=3&since=24h'
+```
+
+If `/v1/sources` shows a source as unhealthy, its `last_error` says why. The
+service keeps working on whatever sources do answer.
 
 ## The interesting part: merging
 
